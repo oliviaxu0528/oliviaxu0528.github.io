@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automatic Typing Effect</title>
+	<style>
+		.typed {
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size: 30px;
+			font-weight: bold;
+			color: orange;
+			white-space: nowrap;
+			overflow: hidden;
+			animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+		}
+
+		@keyframes typing {
+			from { width: 0 }
+			to { width: 100% }
+		}
+
+		@keyframes blink-caret {
+			from, to { border-color: transparent }
+			50% { border-color: orange }
+		}
+	</style>
+</head>
+<body>
+	<span class="typed" data-typed-items="Full-stack software engineer, Front-end developer, Back-end developer, Software developer"></span>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script>
+        var typed = new Typed('.typed', {
+            strings: ['Full-stack software engineer', 'Front-end developer', 'Back-end developer', 'Software developer'],
+            typeSpeed: 70,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+</html>
